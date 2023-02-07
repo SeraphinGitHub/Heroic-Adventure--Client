@@ -1,0 +1,9 @@
+
+.statPlates {
+   position: relative;
+   height: 80px;
+   width: 100%;
+   justify-content: space-between;
+
+   background-color: pink;
+}
