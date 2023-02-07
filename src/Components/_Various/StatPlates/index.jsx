@@ -9,31 +9,30 @@ const Template = (props) => {
 
          {/* Name */}
          <Plate
-            frameColor  ={StyleVar.frame.silver}
-            frameScale  ={"65%, 50%"}
-            plateColor  ={StyleVar.plate.red}
-            textOffset  ={"45%"}
-            textSize    ={StyleVar.text.medium}
-            textColor   ={StyleVar.text.white}
             value       ={props.name}
+            plateWidth  ={"250px"}
+            frameScale  ={"70%, 60%"}
+            frameTopPos ={"-18px"}
+            frameColor  ={StyleVar.frame.silver}
+            plateColor  ={props.nameColor}
+            textSize    ={StyleVar.text.small}
+            textColor   ={StyleVar.text.white}
             isClickable ={false}
          />
 
 
          {/* Value */}
          <Plate
-            frameColor  ={StyleVar.frame.silver}
-            frameScale  ={"45%, 50%"}
-            plateColor  ={StyleVar.plate.grey}
-            textOffset  ={"45%"}
-            textSize    ={StyleVar.text.medium}
-            textColor   ={StyleVar.text.white}
             value       ={props.value}
+            plateWidth  ={"178px"}
+            frameScale  ={"50%, 60%"}
+            frameTopPos ={"-18px"}
+            frameColor  ={StyleVar.frame.silver}
+            plateColor  ={props.valueColor}
+            textSize    ={StyleVar.text.small}
+            textColor   ={StyleVar.text.white}
             isClickable ={false}
          />
-
-         {/* <Plate value={props.name}  color={props.nameColor ? props.nameColor :"red" }/>
-         <Plate value={props.value} color={props.valueColor? props.valueColor:"grey"}/> */}
       </div>
    </>);
 }

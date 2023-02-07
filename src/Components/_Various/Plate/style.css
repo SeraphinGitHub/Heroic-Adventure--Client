@@ -1,25 +1,22 @@
 
 .plate {
    position: relative;
-   /* top: 100px; */
-   /* left: 100px; */
+   height: 100%;
    background-color: blue;
 }
 
-.frame,
-.plate p {
-   position: absolute;
-}
-
 .frame {
-   width: 357px;
-   height: 91px;
+   position: absolute;
+   height: 90px;
+   width: 356px;
    background-color: black;
 }
 
 .plate p {
    user-select: none;
-   width: auto;
+   position: absolute;
+   top: 50%;
+   transform: translate(0%, -50%);
 }
 
 .plate:hover .whitePlate {

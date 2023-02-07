@@ -1,15 +1,4 @@
 
-
-
-.aze {
-   height: 600px;
-   width: 450px;
-   background-color: yellowgreen;
-}
-
-
-
-
 html * {
    margin: 0;
    padding: 0;
@@ -94,4 +83,42 @@ p {
       width: 1110px !important;
       background-position: 0 0;
    } */
+}
+
+
+
+
+
+
+
+
+
+
+.aze {
+   position: relative;
+   top: 100px;
+   left: 100px;
+   width: 490px;
+	height: 786px;
+   align-content: flex-start;
+}
+
+.pict {
+   position: absolute;
+   width: 561px;
+	height: 786px;
+}
+
+
+.woodPanel {
+   top: -80px;
+   background-position: -374px -131px;
+   /* width: 561px; */
+	/* height: 786px; */
+}
+
+.paperPanel {
+   background-position: -946px -135px;
+   width: 558px;
+   height: 781px;
 }

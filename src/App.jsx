@@ -1,27 +1,36 @@
 import "./App.css"
 import StatPlates from "./Components/_Various/StatPlates";
 
-
 import StyleVar from "./StyleVar";
-import Plate    from "./Components/_Various/Plate"; 
+
 const App = () => {
 
    return(<>
-      {/* <div className="aze">
+      <div className="Flex aze">
+         <div className="Img pict woodPanel"/>
 
-         <StatPlates name="MaxHealth" value="1500"/>
-      </div> */}
+         <StatPlates
+            name  ="Health"
+            value ="3000"
+            nameColor  ={StyleVar.plate.red}
+            valueColor ={StyleVar.plate.grey}
+         />
 
-      <Plate
-         frameColor  ={StyleVar.frame.silver}
-         frameScale  ={"70%, 70%"}
-         plateColor  ={StyleVar.plate.red}
-         textOffset  ={"45%"}
-         textSize    ={StyleVar.text.medium}
-         textColor   ={StyleVar.text.white}
-         value       ={"Max Health"}
-         isClickable ={false}
-      />
+         <StatPlates
+            name  ="Mana"
+            value ="2200"
+            nameColor  ={StyleVar.plate.red}
+            valueColor ={StyleVar.plate.grey}
+         />
+
+         <StatPlates
+            name  ="Energy"
+            value ="3500"
+            nameColor  ={StyleVar.plate.red}
+            valueColor ={StyleVar.plate.grey}
+         />
+
+      </div>
 
       {/* <OneStat name="Max Health"   value="2500"/>
       <OneStat name="Regen Health" value="50/s"/>
