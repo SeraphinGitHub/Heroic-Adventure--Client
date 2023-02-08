@@ -46,7 +46,7 @@ button {
 
 p {
    text-align: center;
-   font-size: 150%;
+   font-size: 50px;
 }
 
 
@@ -99,8 +99,10 @@ p {
    top: 100px;
    left: 100px;
    width: 490px;
-	height: 786px;
+	height: auto;
    align-content: flex-start;
+
+   transform: scale(64%, 63%);
 }
 
 .pict {

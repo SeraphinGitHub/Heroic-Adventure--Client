@@ -11,17 +11,13 @@ const styleVar = {
       grey:   "greyPlate",
       blue:   "bluePlate",
       red:    "redPlate",
-      purple: "purplePlate",
+      violet: "violetPlate",
       green:  "greenPlate",
       yellow: "yellowPlate",
       orange: "orangePlate",
    },
    
    text: {
-      small:  "200%",
-      medium: "250%",
-      big:    "300%",
-
       white:  "white",
       green:  "lime",
       yellow: "gold",

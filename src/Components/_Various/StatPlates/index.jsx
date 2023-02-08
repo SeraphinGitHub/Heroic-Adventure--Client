@@ -10,13 +10,12 @@ const Template = (props) => {
          {/* Name */}
          <Plate
             value       ={props.name}
-            plateWidth  ={"250px"}
-            frameScale  ={"70%, 60%"}
-            frameTopPos ={"-18px"}
-            frameColor  ={StyleVar.frame.silver}
-            plateColor  ={props.nameColor}
-            textSize    ={StyleVar.text.small}
-            textColor   ={StyleVar.text.white}
+            plateTrans  ={props.namePlateTrans}
+            plateScale  ={props.namePlateScale}
+            plateColor  ={props.namePlateColor}
+            textScale   ={props.nameTextScale}
+            textColor   ={props.textColor}
+            frameColor  ={props.frameColor}
             isClickable ={false}
          />
 
@@ -24,13 +23,12 @@ const Template = (props) => {
          {/* Value */}
          <Plate
             value       ={props.value}
-            plateWidth  ={"178px"}
-            frameScale  ={"50%, 60%"}
-            frameTopPos ={"-18px"}
-            frameColor  ={StyleVar.frame.silver}
-            plateColor  ={props.valueColor}
-            textSize    ={StyleVar.text.small}
-            textColor   ={StyleVar.text.white}
+            plateTrans  ={props.valuePlateTrans}
+            plateScale  ={props.valuePlateScale}
+            plateColor  ={props.valuePlateColor}
+            textScale   ={props.valueTextScale}
+            textColor   ={props.textColor}
+            frameColor  ={props.frameColor}
             isClickable ={false}
          />
       </div>

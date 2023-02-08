@@ -1,12 +1,6 @@
 
 .plate {
    position: relative;
-   height: 100%;
-   background-color: blue;
-}
-
-.frame {
-   position: absolute;
    height: 90px;
    width: 356px;
    background-color: black;
@@ -14,9 +8,7 @@
 
 .plate p {
    user-select: none;
-   position: absolute;
-   top: 50%;
-   transform: translate(0%, -50%);
+   width: auto;
 }
 
 .plate:hover .whitePlate {
