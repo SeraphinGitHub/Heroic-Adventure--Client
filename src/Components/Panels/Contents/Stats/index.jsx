@@ -7,16 +7,16 @@ const Template = () => {
       
       name: {
          color:      StyleVar.plate.red,
-         trans:     "-38%, -15%",
-         scale:     "80%, 70%",
-         textScale: "120%, 105%",
+         trans:     "-36%, -15%",
+         scale:     "83%, 70%",
+         textScale: "110%, 100%",
       },
 
       value: {
          color:     StyleVar.plate.grey,
-         trans:     "77%, -15%",
+         trans:     "79%, -15%",
          scale:     "55%, 70%",
-         textScale: "150%, 100%",
+         textScale: "160%, 100%",
       },
 
       frameColor: StyleVar.frame.gold,

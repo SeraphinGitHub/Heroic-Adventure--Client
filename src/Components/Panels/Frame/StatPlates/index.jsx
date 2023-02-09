@@ -4,7 +4,7 @@ import Plate from "../Plate";
 const Template = (props) => {
    
    return(<>
-      <div className="Flex statPlates">
+      <div className={`Flex statPlates`}>
 
          {/* Name */}
          <Plate

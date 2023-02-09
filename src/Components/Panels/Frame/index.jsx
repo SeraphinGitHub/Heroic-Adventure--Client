@@ -5,16 +5,19 @@ import Plate      from "./Plate";
 const Template = (props) => {
 
    return(<>
-      <section className="Flex Img panel">
-         { props.displayPaper
-            && <div className="Img paperSheet"/>
+      <section className={`Flex Img panel`}>
+
+         {props.displayPaper &&
+            <div className={`Img paperSheet`}/>
          }
 
-         { props.displayCorners
-            && <div className="Img corner"/>
-            && <div className="Img corner"/>
-            && <div className="Img corner"/>
-            && <div className="Img corner"/>
+         {props.displayCorners &&
+            <div className={`Flex corners`}>
+               <div className={`Img ${StyleVar.panelCorner.silver}`}/>
+               <div className={`Img ${StyleVar.panelCorner.silver}`}/>
+               <div className={`Img ${StyleVar.panelCorner.silver}`}/>
+               <div className={`Img ${StyleVar.panelCorner.silver}`}/>
+            </div>
          }
          
          {/* Panel Name */}
@@ -31,7 +34,7 @@ const Template = (props) => {
 
 
          {/* Panel Content */}
-         <div className="Flex content">
+         <div className={`Flex content`}>
             {props.panelContent}
          </div>
 

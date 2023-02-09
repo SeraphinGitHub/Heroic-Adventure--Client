@@ -21,7 +21,7 @@ const Template = (props) => {
          <div className={`Flex Img frame ${props.frameColor}`}>
 
             <PlateColor color={props.plateColor}/>
-            <p style={style.text} className="Flex">{props.value}</p>
+            <p style={style.text} className={`Flex`}>{props.value}</p>
             
          </div>
       </div>

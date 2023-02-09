@@ -6,6 +6,16 @@ const styleVar = {
       gold:   "goldFrame",
    },
 
+   panelCorner: {
+      silver: "silverPanelCorner",
+      gold:   "goldPanelCorner",
+   },
+
+   fieldCorner: {
+      silver: "silverFieldCorner",
+      gold:   "goldFieldCorner",
+   },
+
    plate: {
       white:  "whitePlate",
       grey:   "greyPlate",
