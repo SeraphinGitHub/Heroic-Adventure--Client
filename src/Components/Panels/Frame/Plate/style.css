@@ -1,12 +1,17 @@
 
 .plate {
+   position: absolute;
+   width: auto;
+}
+
+.frame {
    position: relative;
    height: 90px;
    width: 356px;
    background-color: black;
 }
 
-.plate p {
+.frame p {
    user-select: none;
    width: auto;
 }
@@ -15,7 +20,7 @@
    visibility: visible !important;
 }
 
-.clickPlate:active {
+.clickPlate:active .frame {
    top: 3px;
    left: 3px;
 }

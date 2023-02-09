@@ -36,7 +36,7 @@ p,
 input,
 button {
    font-family: "Dimbo-Regular";
-   text-shadow: black 3px 2px 3px;
+   text-shadow: black 5px 5px 5px;
 }
 
 input,
@@ -83,44 +83,4 @@ p {
       width: 1110px !important;
       background-position: 0 0;
    } */
-}
-
-
-
-
-
-
-
-
-
-
-.aze {
-   position: relative;
-   top: 100px;
-   left: 100px;
-   width: 490px;
-	height: auto;
-   align-content: flex-start;
-
-   transform: scale(64%, 63%);
-}
-
-.pict {
-   position: absolute;
-   width: 561px;
-	height: 786px;
-}
-
-
-.woodPanel {
-   top: -80px;
-   background-position: -374px -131px;
-   /* width: 561px; */
-	/* height: 786px; */
-}
-
-.paperPanel {
-   background-position: -946px -135px;
-   width: 558px;
-   height: 781px;
 }

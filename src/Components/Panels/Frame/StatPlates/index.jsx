@@ -1,6 +1,5 @@
 import "./style.css";
-import StyleVar from "../../../StyleVar";
-import Plate    from "../Plate"; 
+import Plate from "../Plate"; 
 
 const Template = (props) => {
    

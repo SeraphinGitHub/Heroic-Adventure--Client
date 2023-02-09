@@ -1,0 +1,39 @@
+
+.panel {
+   position: absolute;
+   top: 50px;
+   left: 50px;
+
+   width: 561px;
+	height: 786px;
+   background-position: -374px -131px;
+   transform: scale(65%, 65%);
+}
+
+.content {
+   position: relative;
+   overflow-y: scroll;
+   scrollbar-width: none;
+   align-content: flex-start;
+   height: 80%;
+   width: 90%;
+}
+
+.paperSheet {
+   position: absolute;
+   width: 558px;
+   height: 781px;
+   background-position: -946px -135px;
+}
+
+.silverCornerPanel {
+	background-position: -439px -946px;
+	height: 113px;
+	width: 132px;
+}
+
+.goldCornerPanel {
+	background-position: -439px -1092px;
+	height: 112px;
+	width: 131px;
+}

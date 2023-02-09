@@ -4,6 +4,7 @@ import PlateColor from "../PlateColor";
 const Template = (props) => {
 
    const clickPlate = props.isClickable ? "clickPlate" : "";
+   
    const style = {
       plate: {
          transform: `scale(${props.plateScale}) translate(${props.plateTrans})`,
@@ -16,9 +17,13 @@ const Template = (props) => {
    }
    
    return(<>
-      <div style={style.plate} className={`Flex Img plate ${props.frameColor} ${clickPlate}`}>
-         <PlateColor color={props.plateColor}/>
-         <p style={style.text} className="Flex">{props.value}</p>
+      <div style={style.plate} className={`Flex plate ${clickPlate}`}>
+         <div className={`Flex Img frame ${props.frameColor}`}>
+
+            <PlateColor color={props.plateColor}/>
+            <p style={style.text} className="Flex">{props.value}</p>
+            
+         </div>
       </div>
    </>);
 }
