@@ -1,13 +1,33 @@
 import "./style.css";
+import { useState } from "react";
 import PlateColor from "../PlateColor";
 
 const Template = (props) => {
 
-   const clickPlate = props.isClickable ? "clickPlate" : "";
+   let clickPlate   = "";
+   let clickHandler = null;
+   const [trigger, setTrigger] = useState(false);
    
+   if(props.isClickable) {
+      clickPlate = "clickPlate";
+      
+      if(props.callback) clickHandler = () => {
+         setTrigger(!trigger);
+         props.callback(!trigger);
+      }
+   }
+
    const style = {
       plate: {
-         transform: `scale(${props.plateScale}) translate(${props.plateTrans})`,
+         transform:
+            props.plateScale && props.plateTrans
+            ?`scale(${props.plateScale}) translate(${props.plateTrans})`
+            : props.plateScale? `scale(${props.plateScale})`
+            : props.plateTrans? `translate(${props.plateTrans})`
+            : ""
+         ,
+
+         position:  props.isUnsetPos? "unset" :"absolute",
       },
 
       text: {
@@ -17,14 +37,14 @@ const Template = (props) => {
    }
    
    return(<>
-      <div style={style.plate} className={`Flex plate ${clickPlate}`}>
+      <button onClick={clickHandler} style={style.plate} className={`Flex plate ${clickPlate}`}>
          <div className={`Flex Img frame ${props.frameColor}`}>
 
             <PlateColor color={props.plateColor}/>
             <p style={style.text} className={`Flex`}>{props.value}</p>
             
          </div>
-      </div>
+      </button>
    </>);
 }
 

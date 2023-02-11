@@ -36,12 +36,13 @@ p,
 input,
 button {
    font-family: "Dimbo-Regular";
-   text-shadow: black 5px 5px 5px;
+   text-shadow: black -3px -3px 10px, black 3px 3px 10px;
 }
 
 input,
 button {
    border: none;
+   background: none;
 }
 
 p {

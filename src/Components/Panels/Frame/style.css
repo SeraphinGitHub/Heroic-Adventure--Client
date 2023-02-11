@@ -4,7 +4,6 @@
    width: 561px;
 	height: 786px;
    background-position: -374px -131px;
-   transform: scale(65%, 65%);
 }
 
 .content {
@@ -13,6 +12,8 @@
    scrollbar-width: none;
    align-content: flex-start;
    height: 80%;
+   width: 92%;
+   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .paperSheet {

@@ -9,26 +9,24 @@ const Template = (props) => {
          {/* Name */}
          <Plate
             value       ={props.name}
-            plateTrans  ={props.namePlateTrans}
-            plateScale  ={props.namePlateScale}
-            plateColor  ={props.namePlateColor}
-            textScale   ={props.nameTextScale}
+            plateTrans  ={props.nameStyle.trans}
+            plateScale  ={props.nameStyle.scale}
+            plateColor  ={props.nameStyle.color}
+            textScale   ={props.nameStyle.textScale}
             textColor   ={props.textColor}
             frameColor  ={props.frameColor}
-            isClickable ={false}
          />
 
 
          {/* Value */}
          <Plate
             value       ={props.value}
-            plateTrans  ={props.valuePlateTrans}
-            plateScale  ={props.valuePlateScale}
-            plateColor  ={props.valuePlateColor}
-            textScale   ={props.valueTextScale}
+            plateTrans  ={props.valueStyle.trans}
+            plateScale  ={props.valueStyle.scale}
+            plateColor  ={props.valueStyle.color}
+            textScale   ={props.valueStyle.textScale}
             textColor   ={props.textColor}
             frameColor  ={props.frameColor}
-            isClickable ={false}
          />
       </div>
    </>);
