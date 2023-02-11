@@ -1,4 +1,8 @@
-import "./style.css";
+import "./plateColor.css";
+
+/* Props:
+   * color => String
+*/
 
 const Template = (props) => {
 

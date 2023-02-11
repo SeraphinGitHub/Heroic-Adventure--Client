@@ -1,36 +1,36 @@
 
-.statSegment {
+.plateSection {
    align-content: flex-start;
    height: auto;
    margin-bottom: 35px;
 }
 
-.segContainer,
-.segContainer ul {
+.plateList,
+.plateList ul {
    height: auto;
    max-height: 400px;
    transition-duration: 0.5s;
 }
 
-.segContainer {
+.plateList {
    overflow: hidden;
 }
 
-.segContainer ul {
+.plateList ul {
    position: relative;
    top: 0;
 }
 
-.segContainer li {
+.plateList li {
    position: relative;
    height: 75px;
    width: 100%;
 }
 
-.hideStatPlate {
-   top: -400px;
+.hideList {
+   top: -400px !important;
 }
 
-.hideStatSeg {
-   max-height: 0px;
+.hideSection {
+   max-height: 0px !important;
 }

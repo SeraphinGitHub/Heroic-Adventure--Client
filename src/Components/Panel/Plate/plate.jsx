@@ -1,6 +1,19 @@
-import "./style.css";
+import "./plate.css";
 import { useState } from "react";
-import PlateColor from "../PlateColor";
+import PlateColor from "./PlateColor/plateColor";
+
+/* Props:
+   * value       => String || Number
+   * translate   => String
+   * scale       => String
+   * color       => String
+   * textScale   => String
+   * textColor   => String
+   * frameColor  => String
+   * isUnsetPos  => Boolean
+   * isClickable => Boolean
+   * callback    => Function
+*/
 
 const Template = (props) => {
 
@@ -20,10 +33,10 @@ const Template = (props) => {
    const style = {
       plate: {
          transform:
-            props.plateScale && props.plateTrans
-            ?`scale(${props.plateScale}) translate(${props.plateTrans})`
-            : props.plateScale? `scale(${props.plateScale})`
-            : props.plateTrans? `translate(${props.plateTrans})`
+            props.scale && props.translate
+            ?`scale(${props.scale}) translate(${props.translate})`
+            : props.scale? `scale(${props.scale})`
+            : props.translate? `translate(${props.translate})`
             : ""
          ,
 
@@ -40,7 +53,7 @@ const Template = (props) => {
       <button onClick={clickHandler} style={style.plate} className={`Flex plate ${clickPlate}`}>
          <div className={`Flex Img frame ${props.frameColor}`}>
 
-            <PlateColor color={props.plateColor}/>
+            <PlateColor color={props.color}/>
             <p style={style.text} className={`Flex`}>{props.value}</p>
             
          </div>

@@ -1,16 +1,26 @@
-import "./style.css";
-import StyleVar   from "../../../StyleVar";
-import Plate      from "./Plate";
+import "./panel.css";
+import StyleVar   from "../../StyleVar";
+import PaperSheet from "./PaperSheet/paperSheet";
+import Plate      from "./Plate/plate";
+
+/* Props:
+   * name        => String
+   * tanslate    => String
+   * scale       => String
+   * showPaper   => Boolean
+   * showCorners => Boolean
+   * content     => Component
+*/
 
 const Template = (props) => {
 
    const style = {
       panel: {
          transform:
-            props.panelScale && props.panelTrans
-            ?`scale(${props.panelScale}) translate(${props.panelTrans})`
-            : props.panelScale? `scale(${props.panelScale})`
-            : props.panelTrans? `translate(${props.panelTrans})`
+            props.scale && props.tanslate
+            ?`scale(${props.scale}) translate(${props.tanslate})`
+            : props.scale? `scale(${props.scale})`
+            : props.tanslate? `translate(${props.tanslate})`
             : ""
          ,
       },
@@ -20,13 +30,13 @@ const Template = (props) => {
       <section style={style.panel} className={`Flex Img panel`}>
 
          {/* Toggle Paper */}
-         {props.displayPaper &&
-            <div className={`Img paperSheet`}/>
+         {props.showPaper &&
+            <PaperSheet/>
          }
 
 
          {/* Toggle Corners */}
-         {props.displayCorners &&
+         {props.showCorners &&
             <div className={`Flex corners`}>
                <div className={`Img ${StyleVar.panelCorner.silver}`}/>
                <div className={`Img ${StyleVar.panelCorner.silver}`}/>
@@ -37,12 +47,12 @@ const Template = (props) => {
          
 
          {/* Panel Name */}
-         {props.displayPlate &&
+         {props.name &&
             <Plate
-               value       ={props.panelName}
-               plateTrans  ="0%, -60%"
-               plateScale  ="95%, 90%"
-               plateColor  ={StyleVar.plate.blue}
+               value       ={props.name}
+               translate   ="0%, -60%"
+               scale       ="95%, 90%"
+               color       ={StyleVar.plate.blue}
                textScale   ="130%, 100%"
                textColor   ={StyleVar.text.yellow}
                frameColor  ={StyleVar.frame.gold}
@@ -53,7 +63,7 @@ const Template = (props) => {
 
          {/* Panel Content */}
          <div className={`Flex content`}>
-            {props.panelContent}
+            {props.content}
          </div>
 
       </section>

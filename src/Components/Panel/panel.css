@@ -16,13 +16,6 @@
    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.paperSheet {
-   position: absolute;
-   width: 555px;
-   height: 778px;
-   background-position: -946px -135px;
-}
-
 .corners div {
    position: absolute;
    height: 113px;
