@@ -9,7 +9,7 @@
 .plateList ul {
    height: auto;
    max-height: 400px;
-   transition-duration: 0.5s;
+   transition-duration: 0.8s;
 }
 
 .plateList {
@@ -25,6 +25,10 @@
    position: relative;
    height: 75px;
    width: 100%;
+}
+
+.plateList li:hover .whitePlate {
+   visibility: visible !important;
 }
 
 .hideList {

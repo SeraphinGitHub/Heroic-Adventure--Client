@@ -30,8 +30,9 @@ const styleVar = {
    text: {
       white:  "white",
       green:  "lime",
-      red: "red",
+      red:    "red",
       yellow: "gold",
+      blue:   "dodgerblue",
    },
 
 }

@@ -10,51 +10,64 @@ const Template = () => {
    const statsData = [
       {
          title: "Health",
-         plateColor:  StyleVar.plate.green,
+         plateColor:   StyleVar.plate.green,
+         isUp:   true,
+         isDown: false,
          statsPair: [
-            ["Max Health",     3000],
             ["Current Health", 566],
-            ["Regen Health",   "50/s"],
+            ["Max Health",     3000],
+            ["Bonus Health", `+ ${250}`],
+            ["Health Regen", `${50}/s`],
          ],
       },
 
       {
          title: "Mana",
          plateColor:  StyleVar.plate.blue,
+         isUp:   false,
+         isDown: true,
          statsPair: [
-            ["Max Mana",     2200],
             ["Current Mana", 758],
-            ["Regen Mana",   "70/s"],
+            ["Max Mana",     2200],
+            ["Bonus Mana", `+ ${0}`],
+            ["Mana Regen", `${70}/s`],
          ],
       },
 
       {
          title: "Energy",
          plateColor:  StyleVar.plate.yellow,
+         isUp:   true,
+         isDown: false,
          statsPair: [
-            ["Max Energy",     3500],
             ["Current Energy", 1780],
-            ["Regen Energy",   "90/s"],
+            ["Max Energy",     3500],
+            ["Bonus Energy", `+ ${500}`],
+            ["Energy Regen", `${90}/s`],
          ],
       },
 
       {
          title: "Attack",
-         // plateColor:  StyleVar.plate.violet,
          plateColor:  StyleVar.plate.orange,
+         isUp:   false,
+         isDown: true,
          statsPair: [
-            ["Attack Speed", "0.6s"],
-            ["Damages",      "270 - 420"],
+            ["Attack Speed",  `${0.6}s`],
+            ["Damages",       `${270} - ${420}`],
+            ["Bonus Damages", `+ ${0}`],
          ],
       },
 
       {
          title: "Movements",
-         // plateColor:  StyleVar.plate.orange,
          plateColor:  StyleVar.plate.violet,
+         isUp:   false,
+         isDown: false,
          statsPair: [
-            ["Walk Speed", "100%"],
-            ["Run Speed",  "200%"],
+            ["Walk Speed",  `${100}%`],
+            ["Run Speed",   `${200}%`],
+            ["Bonus Speed", `+ ${0}`],
          ],
       },
    ];
@@ -65,6 +78,8 @@ const Template = () => {
          key        ={section.title}
          title      ={section.title}
          plateColor ={section.plateColor}
+         isUp       ={section.isUp}
+         isDown     ={section.isDown}
          data       ={section.statsPair}
       />
    ))}

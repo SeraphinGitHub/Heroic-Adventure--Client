@@ -6,13 +6,19 @@ import Plate      from "../Plate/plate";
 /* Props:
    * title      => String
    * plateColor => String
+   * isUp       => Boolean
+   * isDown     => Boolean
    * data       => Array
 */
 
 const Template = (props) => {
    
    const sectionRef = useRef(null);
-   const listRef = useRef(null);
+   const listRef    = useRef(null);
+
+   const defaultColor = StyleVar.text.white;
+   let valueColor;
+   let tempColor;
 
    const plateStyle = [
       {
@@ -45,6 +51,27 @@ const Template = (props) => {
       }
    }
 
+   const updateStatColor = (plateIndex, statIndex) => {
+
+      // If plate is value plate
+      return plateIndex === 1 && (
+               
+         // If stat is 2nd stat
+         statIndex === 1 && (
+            props.isUp   && !props.isDown ? tempColor = StyleVar.text.green
+           :props.isDown && !props.isUp   ? tempColor = StyleVar.text.red
+           :tempColor  = defaultColor
+         )? valueColor = tempColor
+
+         // If stat is 3rd stat
+         :statIndex === 2
+         ? valueColor = StyleVar.text.blue
+         : valueColor = defaultColor
+
+      )? valueColor = valueColor
+      :  valueColor = defaultColor
+   }
+
    return(<>
       <div className={`Flex plateSection`}>
 
@@ -64,19 +91,21 @@ const Template = (props) => {
 
          <div ref={sectionRef} className={`Flex plateList`}>
          <ul  ref={listRef}    className={`Flex`}>
-         {props.data.map(statsPair => (
+         {props.data.map((statsPair, statIndex) => (
 
             <li key={statsPair[0]} className={`Flex`}>
-            {plateStyle.map((plate, index) => (
+            {plateStyle.map((plate, plateIndex) => (
+
+               updateStatColor(plateIndex, statIndex),
 
                <Plate
                   key        ={plate.title}
-                  value      ={statsPair[index]}
+                  value      ={statsPair[plateIndex]}
                   translate  ={plate.trans}
                   scale      ={plate.scale}
                   color      ={plate.color}
                   textScale  ={plate.textScale}
-                  textColor  ={StyleVar.text.white}
+                  textColor  ={valueColor}
                   frameColor ={StyleVar.frame.gold}
                />
             ))}
